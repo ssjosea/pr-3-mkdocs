@@ -36,7 +36,7 @@ Para esta práctica el objetivo será implementar WordPress en tres fases:
 
 - ## **Fase 1:**
 
-    ![](images/pr-09/arquitectura-pr09-fase01.png)
+    ![](site/assets/images/pr-09/arquitectura-pr09-fase01.png)
 
 
     - 2 instancias con la instalación de WordPress mediante Ansible.
@@ -70,7 +70,7 @@ Para esta práctica el objetivo será implementar WordPress en tres fases:
     
  - ## **Fase 2:**
 
-    ![](images/pr-09/arquitectura-pr09-fase02.png)
+    ![](site/assets/images/pr-09/arquitectura-pr09-fase02.png)
 
 
     - 5 instancias con la instalación de WordPress mediante Ansible agrupadas de la siguiente manera:
