@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../about/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../practica-09/">
+        <link rel="next" href="../practica-07/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
-        <title>Práctica 07 - IAW</title>
+        <title>Acerca de - IAW</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejercicio-7-pila-lamp-en-dos-niveles" class="md-skip">
+        <a href="#jose-a-estrella-tijeras-administrador-de-sistemas-informaticos-en-red" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 07
+              Acerca de
             
           </span>
         </div>
@@ -199,21 +199,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        Acerca de
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -226,12 +211,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Práctica 07
+          Acerca de
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Práctica 07
+        Acerca de
       </a>
       
         
@@ -250,8 +235,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jose-a-estrella-tijeras" class="md-nav__link">
-    Jose A. Estrella Tijeras
+  <a href="#un-poco-sobre-mi" class="md-nav__link">
+    Un poco sobre mi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion" class="md-nav__link">
+    Información
   </a>
   
 </li>
@@ -260,6 +252,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-07/" class="md-nav__link">
+        Práctica 07
+      </a>
     </li>
   
 
@@ -306,8 +313,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jose-a-estrella-tijeras" class="md-nav__link">
-    Jose A. Estrella Tijeras
+  <a href="#un-poco-sobre-mi" class="md-nav__link">
+    Un poco sobre mi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion" class="md-nav__link">
+    Información
   </a>
   
 </li>
@@ -327,57 +341,12 @@
                   
 
 
-<h1 id="ejercicio-7-pila-lamp-en-dos-niveles">Ejercicio 7 - Pila LAMP en dos niveles</h1>
-<h2 id="jose-a-estrella-tijeras">Jose A. Estrella Tijeras</h2>
-<p>En esta practica vamos a implemententar la pila web LAMP en 2 instancias AWS en la ultima versión de Ubuntu Server</p>
-<p>La arquitectura estará formada por:</p>
-<ul>
-<li>Una capa de front-end, formada por un servidor web con Apache HTTP Server.</li>
-<li>Una capa de back-end, formada por un servidor MySQL.</li>
-</ul>
-<p><img alt="" src="https://github.com/ssjosea/practica-07/blob/main/images/arquitectura.png?raw=true" /></p>
-<p>Contenidos del repositorio:
-- <a href="https://github.com/ssjosea/practica-07/tree/main/ansible"><code>ansible</code></a>: Scripts en <strong>ansible (.yml)</strong> -&gt; Directorios organizados en <strong>back</strong>; para la instalación de la instancia Back-End y <strong>front</strong> para la instancia Front-End.
-    - <a href="https://github.com/ssjosea/practica-07/tree/main/ansible/back"><code>back</code></a>
-        - <a href="https://github.com/ssjosea/practica-07/blob/main/ansible/back/install_backend.yml"><code>install_backend</code></a>: Instalación de MySQL y configuración de MySQL Server para aceptar conexiones desde todas la interfaces de red
-        - <a href="https://github.com/ssjosea/practica-07/blob/main/ansible/back/deploy_backend.yml"><code>deploy_backend</code></a>: Instalación de Python y modulo PyMySQL. Creación de una base de datos y un usuario y pila LAMP.
-    - <a href="https://github.com/ssjosea/practica-07/tree/main/ansible/front"><code>front</code></a>
-        - <a href="https://github.com/ssjosea/practica-07/blob/main/ansible/front/install_frontend.yml"><code>install_frontend</code></a>: Instalación Apache y librerias de PHP.
-        - <a href="https://github.com/ssjosea/practica-07/blob/main/ansible/front/deploy_frontend.yml"><code>deploy_frontend</code></a>: Instalación pila LAMP y cambios en las variables del fichero <strong>/var/www/html/config.php</strong>. Cambiamos las propiedades del fichero <strong>/etc/apache2/mods-enabled/dir.conf</strong>.</p>
-<ul>
-<li>
-<p><a href="https://github.com/ssjosea/practica-07/tree/main/scripts"><code>scripts</code></a>: Scripts en <strong>bash (.sh)</strong> -&gt; Instalación de las instancias <a href="https://github.com/ssjosea/practica-07/tree/main/scripts/back"><strong>Back-End</strong></a> y  <a href="https://github.com/ssjosea/practica-07/tree/main/scripts/front"><strong>Front-End</strong> </a>.</p>
-</li>
-<li>
-<p><a href="https://github.com/ssjosea/practica-07/blob/main/install_cerbot.yml"><code>ìnstall_cerbot</code></a>: Script de Ansible para la instalación del certificado Cerbot.</p>
-</li>
-<li>
-<p><a href="https://github.com/ssjosea/practica-07/blob/main/inventario"><code>inventario</code></a>: Inventario de Ansible con las configuraciones de los 2 hosts (Front-End y backend) con sus IPs públicas y configuración de usuario y ssh.</p>
-</li>
-<li>
-<p><a href="https://github.com/ssjosea/practica-07/blob/main/main.yml"><code>main.yml</code></a>: Playbook principal donde se ordena que se ejecuten el resto de jugadas por orden.</p>
-</li>
-</ul>
-<p>Configuración de reglas de entrada de AWS:</p>
-<ul>
-<li>Front-End:<ul>
-<li>Puertos habilitados:<ul>
-<li>HTTP: 80</li>
-<li>HTTPS: 443</li>
-<li>SSH: 22</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img alt="" src="https://github.com/ssjosea/practica-07/blob/main/images/puertos-frontend.png?raw=true" />
-- Back-End: 
-    - Puertos habilitados: 
-        - HTTP: 80
-        - HTTPS: 443
-        - SSH: 22
-        - MySQL: 3306</p>
-<p><img alt="" src="https://github.com/ssjosea/practica-07/blob/main/images/puertos-backend.png?raw=true" /></p>
+<h1 id="jose-a-estrella-tijeras-administrador-de-sistemas-informaticos-en-red">Jose A. Estrella Tijeras - Administrador de sistemas informáticos en red</h1>
+<h2 id="un-poco-sobre-mi"><strong>Un poco sobre mi</strong></h2>
+<p>Durante mis estudios en <strong>administración de sistemas de información de red</strong>, obtuve una sólida formación en el diseño, implementación y <strong>administración</strong> de <strong>redes</strong> y <strong>sistemas</strong> de <strong>información</strong>. Ha aprendido a mejorar la infraestructura de la red y garantizar que la información esté disponible y segura. También ha desarrollado habilidades en la <strong>resolución</strong> de <strong>problemas técnicos</strong> y la toma de decisiones estratégicas para mejorar la <strong>eficiencia</strong> y el <strong>rendimiento del sistema</strong>.</p>
+<p>Estoy listo para aplicar mis conocimientos y habilidades en el rol de administrador de sistemas y continuar mi desarrollo profesional en este campo. Me considero una persona <strong>proactiva</strong>, <strong>autodirigida</strong> y con <strong>gran capacidad de adaptación</strong>. Me gusta <strong>trabajar en equipo</strong> y siempre estoy dispuesto a ayudar a mis compañeros y resolver problemas juntos. Creo que estas habilidades serían un gran activo para cualquier organización y estoy seguro de que pueden ser muy beneficiosas para cualquier equipo que necesite una persona altamente calificada y motivada. Además, mi habilidad para usar el idioma inglés me ha permitido mejorar mi trabajo en equipo y mis habilidades para resolver problemas.</p>
+<h2 id="informacion"><strong>Información</strong></h2>
+<p>Puedes encontrarme tanto en <a href="https://github.com/ssjosea"><code>GitHub</code></a> como en <a href="https://www.linkedin.com/in/jos%C3%A9-antonio-estrella-tijeras-8163b325b/"><code>Linkedin</code></a>.</p>
 
 
 
