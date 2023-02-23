@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#bienvenido-a-la-web-de-jose-a-estrella-tijeras-alojada-en-github-pages" class="md-skip">
           Skip to content
         </a>
       
@@ -216,16 +216,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#que-es-mkdocs" class="md-nav__link">
+    ¿Qué es MkDocs?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#comandos" class="md-nav__link">
+    Comandos
   </a>
+  
+    <nav class="md-nav" aria-label="Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-new" class="md-nav__link">
+    Comando: new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-serve" class="md-nav__link">
+    Comando: serve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-build" class="md-nav__link">
+    Comando: build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandogh-deploy" class="md-nav__link">
+    Comando:gh-deploy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -279,16 +313,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#que-es-mkdocs" class="md-nav__link">
+    ¿Qué es MkDocs?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#comandos" class="md-nav__link">
+    Comandos
   </a>
+  
+    <nav class="md-nav" aria-label="Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-new" class="md-nav__link">
+    Comando: new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-serve" class="md-nav__link">
+    Comando: serve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-build" class="md-nav__link">
+    Comando: build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandogh-deploy" class="md-nav__link">
+    Comando:gh-deploy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -307,20 +375,51 @@
                   
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="bienvenido-a-la-web-de-jose-a-estrella-tijeras-alojada-en-github-pages">Bienvenido a la web de Jose A. Estrella Tijeras alojada en GitHub Pages</h1>
+<p>La web está alojada en -&gt; <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="que-es-mkdocs">¿Qué es MkDocs?</h2>
+<p>MkDocs es un generador de sitios web estáticos que nos permite crear de forma sencilla un sitio web para documentar un proyecto. El contenido del sitio web está escrito en texto plano en formato Markdown y se configura con un único archivo de configuración en formato YAML.</p>
+<p>En esta práctica vamos a utilizar una imagen Docker que contiene MkDocs y el theme Material.</p>
+<p>Esta imagen <strong>Docker</strong> nos permite:</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Crear un <strong>nuevo proyecto</strong> (Comando: <code>new</code>).</li>
+<li>Crear un servidor de desarrollo local (Comando: <code>serve</code>).</li>
+<li>Generar la documentación (Comando: <code>build</code>).</li>
+<li>Publicar la documentación en GitHub Pages (Comando: <code>gh-deploy</code>).</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<pre><code>Usage: mkdocs [OPTIONS] COMMAND [ARGS]...
+
+  MkDocs - Project documentation with Markdown.
+
+Options:
+  -V, --version  Show the version and exit.
+  -q, --quiet    Silence warnings
+  -v, --verbose  Enable verbose output
+  -h, --help     Show this message and exit.
+
+Commands:
+  build      Build the MkDocs documentation
+  gh-deploy  Deploy your documentation to GitHub Pages
+  new        Create a new MkDocs project
+  serve      Run the builtin development server
+</code></pre>
+<h2 id="comandos">Comandos</h2>
+<h3 id="comando-new">Comando: <code>new</code></h3>
+<p>Crea la estructura de archivos del proyecto MkDocs podemos hacer uso del comando new, como se muestra en el siguiente ejemplo.</p>
+<pre><code>docker run --rm -it -p 8000:8000 -v &quot;$PWD&quot;:/docs squidfunk/mkdocs-material new .
+</code></pre>
+<h3 id="comando-serve">Comando: <code>serve</code></h3>
+<p>Crea el contenedor desde el directorio principal del proyecto con un volumen de tipo bind mount entre nuestra máquina y el contenedor Docker.</p>
+<p>Una vez iniciado el contenedor podemos acceder a la URL <strong>http://localhost:8000</strong> desde un navegador web para ver el estado actual del sitio web que estamos creando.</p>
+<pre><code>docker run --rm -it -p 8000:8000 -v &quot;$PWD&quot;:/docs squidfunk/mkdocs-material
+</code></pre>
+<h3 id="comando-build">Comando: <code>build</code></h3>
+<p>También es posible generar directamente el sitio web sin tener que iniciar un servidor local de desarrollo. Para generar el sitio web automáticamente podemos ejecutar el siguiente comando:</p>
+<pre><code>docker run --rm -it -v &quot;$PWD&quot;:/docs squidfunk/mkdocs-material build
+</code></pre>
+<h3 id="comandogh-deploy">Comando:<code>gh-deploy</code></h3>
+<p>Es posible publicar la el sitio web en GitHub Pages con el siguiente comando:</p>
+<pre><code>docker run --rm -it -v ~/.ssh:/root/.ssh -v &quot;$PWD&quot;:/docs squidfunk/mkdocs-material gh-deploy
 </code></pre>
 
 

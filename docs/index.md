@@ -36,11 +36,17 @@ Commands:
 
 ### Comando: `new`
 
+Crea la estructura de archivos del proyecto MkDocs podemos hacer uso del comando new, como se muestra en el siguiente ejemplo.
+
 ```
 docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material new .
 ```
 
 ### Comando: `serve`
+
+Crea el contenedor desde el directorio principal del proyecto con un volumen de tipo bind mount entre nuestra máquina y el contenedor Docker.
+
+Una vez iniciado el contenedor podemos acceder a la URL **http://localhost:8000** desde un navegador web para ver el estado actual del sitio web que estamos creando.
 
 ```
 docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
@@ -48,11 +54,15 @@ docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
 
 ### Comando: `build`
 
+También es posible generar directamente el sitio web sin tener que iniciar un servidor local de desarrollo. Para generar el sitio web automáticamente podemos ejecutar el siguiente comando:
+
 ```
 docker run --rm -it -v "$PWD":/docs squidfunk/mkdocs-material build
 ```
 
 ### Comando:` gh-deploy`
+
+Es posible publicar la el sitio web en GitHub Pages con el siguiente comando:
 
 ```
 docker run --rm -it -v ~/.ssh:/root/.ssh -v "$PWD":/docs squidfunk/mkdocs-material gh-deploy
